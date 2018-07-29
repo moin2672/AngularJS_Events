@@ -3,19 +3,11 @@
 eventsApp.controller('EventController',
     function EventController($scope){
 
-        $scope.snippet='<span style="color:red;">hi there</span>';
-
-        $scope.boolValue=false;
-
-        $scope.myStyle={color:'red'};
-
-        $scope.myclass='blue';
-
-        $scope.buttonDisabled=true;
+        $scope.sortOrder="name";
 
         $scope.event={
             name: 'Angular Boot Camp',
-            date: '1/1/2013',
+            date: new Date(),
             time: '10:30 am',
             location: {
                 address: 'Google Headquaters',
@@ -29,7 +21,7 @@ eventsApp.controller('EventController',
                     creatorName:'Bob Smith',
                     duration:'1 hr',
                     level:'Advanced',
-                    abstract:'In this session you will learn about directives.',
+                    abstract:'In this session you will learn about directives. Introductory',
                     upVoteCount:0
                 },
                 {
@@ -37,7 +29,7 @@ eventsApp.controller('EventController',
                     creatorName:'John Doe',
                     duration:'30 mins',
                     level:'Introductory',
-                    abstract:'In this session you will learn about the benefits of scopes.',
+                    abstract:'In this session you will learn about the benefits of scopes. Intermediatory',
                     upVoteCount:0
                 },
                 {
@@ -45,7 +37,7 @@ eventsApp.controller('EventController',
                     creatorName:'Jane doe',
                     duration:'2 hr',
                     level:'Intermediatory',
-                    abstract:'Controllers are the begining of everything that Angular does.',
+                    abstract:'Controllers are the begining of everything that Angular does. Advanced',
                     upVoteCount:0
                 }
             ]
