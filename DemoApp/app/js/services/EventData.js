@@ -1,6 +1,6 @@
 eventsApp.factory('eventData', function($http, $log){
     return{
-        getEvent:function(){
+        getEvent:function(successcb){
             $http({method:'GET', url:'/data/event/1'})
                 .success(function(data,status,headers,config){
                     successcb(data);
