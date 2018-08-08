@@ -1,7 +1,7 @@
 'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope, eventData, $log){
+    function EventController($scope, eventData, $log, $anchorScroll){
 
         $scope.sortOrder="name";
 
@@ -16,6 +16,10 @@ eventsApp.controller('EventController',
         };
         $scope.downVoteSession = function(session){
             session.upVoteCount--;
+        };
+
+        $scope.scrollToSession = function(){
+            $anchorScroll();
         };
 
     }
