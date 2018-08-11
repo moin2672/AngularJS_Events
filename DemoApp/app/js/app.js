@@ -15,7 +15,6 @@ var eventsApp = angular
       });
       $routeProvider.when('/event/:eventId',
       {
-          foo:'bar',
           templateUrl:'templates/EventDetails.html',
           controller: 'EventController'
       });

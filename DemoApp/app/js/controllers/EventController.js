@@ -9,7 +9,8 @@ eventsApp.controller('EventController',
                  .$promise
                  .then(function(event){$scope.event=event; console.log(event);})
                  .catch(function(response){console.log(response);});
-        console.log($route.current.foo);
+        console.log($route.params.foo);
+        // http://localhost:8000/#/event/1?foo=bar
 
         $scope.upVoteSession = function(session){
             session.upVoteCount++;
