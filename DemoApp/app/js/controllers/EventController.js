@@ -9,7 +9,9 @@ eventsApp.controller('EventController',
                  .$promise
                  .then(function(event){$scope.event=event; console.log(event);})
                  .catch(function(response){console.log(response);});
+        console.log($route.current.params.eventId);
         console.log($route.current.params.foo);
+        console.log($route.current.pathParams.foo);//display's only if it is defined in route
         // http://localhost:8000/#/event/1?foo=bar
 
         $scope.upVoteSession = function(session){
