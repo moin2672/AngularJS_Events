@@ -10,4 +10,6 @@ function LocaleSampleController($scope, $locale){
     //$scope.myFormat = $locale.DATETIME_FORMATS.shortDate;
 
     // https://code.angularjs.org/1.4.0/i18n
+
+    throw{message: 'error message'};
 });
