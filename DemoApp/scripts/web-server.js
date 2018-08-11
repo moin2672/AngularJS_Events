@@ -14,7 +14,7 @@ app.get('/data/event/:id',events.get);
 app.get('/data/event',events.getAll);
 app.post('/data/event/:id',events.save);
 
-app.get('*', function(req,res){res.sendfile(rootPath+'/app/index.html');});
+app.get('*', function(req,res){res.sendFile(rootPath+'/app/index.html');});
 
 
 app.listen(8000);
