@@ -8,7 +8,7 @@ eventsApp.directive('upvote', function(){
         scope:{
             upvote:"&",
             downvote: "&",
-            count:"@" 
+            count:"=" // to pass integer directly 
         }
     }
 });
