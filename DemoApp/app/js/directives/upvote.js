@@ -8,7 +8,7 @@ eventsApp.directive('upvote', function(){
         scope:{
             upvote:"&",
             downvote: "&",
-            count:"=" /*"@"  --> expecting a string to be passed in*/
+            count:"@" 
         }
     }
 });
