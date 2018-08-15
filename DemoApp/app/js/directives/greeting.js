@@ -5,8 +5,8 @@ eventsApp
         return {
             restrict: "E",
             replace: true,
-            priority: -1,
-            template: '<button class="btn" ng-click="sayHello()">Say Hello</button>',
+            transclude: true,
+            template: '<div><button class="btn" ng-click="sayHello()">Say Hello</button><div ng-transclude></div></div>',
             controller: function($scope) {
                 var greetings=["Hello"];
                 $scope.sayHello = function() {
@@ -21,10 +21,7 @@ eventsApp
     .directive("finnish", function(){
         return {
             restrict: 'A',
-            require: 'greeting',
-            priority:-1,
-            terminal: true, // it will make no directives with a lower priority will execute (i.e here the ng-click, thus change the priority to -ve)
-            //directives of lower order will not execute
+            require: '^greeting', // ^ symbol states look upwards and find the greeting directive
             link: function(scope, element, attrs, controller){
                 controller.addGreeting('hei');
             }
@@ -34,8 +31,7 @@ eventsApp
     .directive("hindi", function(){
         return {
             restrict: 'A',
-            require: 'greeting',
-            priority:-2,
+            require: '^greeting',
             link: function(scope, element, attrs, controller){
                 controller.addGreeting('नमस्ते');
             }
