@@ -8,7 +8,10 @@
                 <input type="text" id="eventName" ng-model="event.name" required placeholder="Name of your event..">
                 <div>{{event.name}}</div>
                 <label for="eventDate">Event Date:</label>
-                <input type="text" date-picker date-keys  id="eventDate" ng-model="event.date" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="format (mm/dd/yyyy)">
+                <div style="position:releative">
+                    <input type="text" date-keys  id="eventDate" ng-model="event.date" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="format (mm/dd/yyyy)">
+                    <date-picker for="eventDate"></date-picker>
+                </div>
                 <label for="eventTime">Event Time:</label>
                 <input type="text" id="eventTime" ng-model="event.time" placeholder="start and end time">
                 <label for="eventLocation">Event Location:</label>
